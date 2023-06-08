@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <div class="hero-container">
+            <div class="generate-container">
+                <h2 class="title" id="title-white">
+                    Generate a
+                </h2>
+                <h2 class="title" id="title-green">
+                    random password               
+                </h2>
+                    <p class="description">
+                        Never use an insecure password again.
+                    </p>
+                    <button id="generate-el" onclick="generate()">Generate passwords</button>
+            </div>
+            <div class="passwords-container">
+                <button id="password-one" onclick="copyText(this)"></button>
+                <button id="password-two" onclick="copyText(this)"></button>
+
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>

@@ -1,11 +1,22 @@
+@font-face {
+    font-family: Inter;
+    src: url(Fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: Karla;
+    src: url(Fonts/Inter-VariableFont_slnt\,wght.ttf);
+
+}
+
+
 /* Color palette
     dark blue: #1F2937
+    lighter blue: #273549
     green: #4ADF86
     white
     grey: #D5D4D8
-
-    lighter background: #273549
-
+    
 */
 
 
@@ -14,6 +25,16 @@ body{
     min-height: auto;
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif; /*backup font incase something fails, unsure if this is the best way to do this */
+}
+
+button{
+    text-align: center;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 16px;
+
+    cursor: pointer;
 }
 
 .hero-container
@@ -21,28 +42,29 @@ body{
     display: flex;
     flex-direction: column;
     align-items: start;
-    flex-wrap: wrap;
-    font-family: Arial, Helvetica, sans-serif;
+    flex-wrap: wrap; /*allows password boxes to stack, wasnt able to get the whole thing scaleable though. waiting until responsive design module to learn it properly(dont want bad habbits) */
+
     width: auto;
     margin-left: 52px;
+
     color:white;
+
+    font-family: Inter; /*keeps font consistent incase new things are added */
+    font-style: normal;
 }
 
-.hero-container button{
-    text-align: center;
+.hero-container button
+{
+    margin: 0;
+    padding: 9px 16px;
+    
     border: none;
     border-radius: 6px;
-    padding: 9px 16px;
-    margin: 0;
-}
 
-button{
-    cursor: pointer;
 }
 
 .generate-container
 {
-    border-bottom: 1px solid #2F3E53;
     margin: 0;
     padding: 0;
 }
@@ -51,6 +73,10 @@ button{
 {
     margin: 0;
     padding: 0;
+
+    font-family: Karla;
+    font-weight: 800;
+    font-size: 40px;
 }
 
 #title-white
@@ -65,29 +91,46 @@ button{
 
 .description
 {
-    color: #D5D4D8;
     margin: 10px 0 51px 0;
+
+    font-weight: 400;
+    font-size: 20px;
+    color: #D5D4D8;
 }
-.generate-container button{
+
+.generate-container button
+{
     width: 191px;
     height: 42px;
 }
 
-#generate-el{
+#generate-el
+{
+    margin-bottom: 35px;
+
     background-color: #4ADF86;
     color: white;
-    margin-bottom: 35px;
 }
 
 .passwords-container
 {
-    margin: 35px 0 0;
-    padding: 0;
+    height: 84px;
+    margin: 0;
+    padding: 35px 0 0 0;
+
+    border-top: 1px solid #2F3E53;
 }
-.passwords-container button{
+.passwords-container button
+{
+    margin: 0 0 10px 0;
     width: 211px;
     height: 39px;
+
     background-color: #273549;
     color: #4ADF86;
-    margin:0 24px 10px 0 ;
+}
+
+#password-one
+{
+    margin-right: 24px;
 }

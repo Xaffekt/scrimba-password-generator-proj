@@ -9,6 +9,7 @@ let passwordTwoEl = document.querySelector("#password-two");
 
 let password;
 
+/* Runs every time generate password button is clicked */
 function generate()
 {   
     passwordOneEl.textContent = createPassword();
@@ -18,25 +19,26 @@ function generate()
 function createPassword()
 {
     password = "";
-    for(let i = 0; i < 15; i++)
+    for(let i = 0; i < 15; i++) //change this if you are going to add custom password length,  i < number user chooses(the question is how to do this, current idea is to have a counter with + and - and then use that input to set length)
     {
-        password += characters[randomNum(characters)];
+        password += characters[randomArrayIndex(characters)];
     }
     console.log(password);
     return password;
 }
 
-function randomNum()
+function randomArrayIndex(array)
 {
-    return Math.floor(Math.random() * characters.length)
+    let length = array.length;
+    return Math.floor(Math.random() * length)
 }
 
 function copyText(id)
-{   console.log(id)
-    let passwordEl = id;
-    let passwordText = passwordEl.textContent;
+{   
+    console.log(id) //tests to see how it grabs the html element
+    let passwordText = id.textContent; //grabs the text inside the button
 
-    navigator.clipboard.writeText(passwordText);
+    navigator.clipboard.writeText(passwordText); //copies text to clipboard
 
     alert("Copied to clipboard");
 }
